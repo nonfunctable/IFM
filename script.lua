@@ -390,10 +390,8 @@ end);
 local Load = library:CreateSection("Misc");
 
 Load:Button("Red Battle Bus", function()
-	game.Workspace.Battle_Bus.Top.Color = "255, 89, 89"
-	game.Workspace.Battle_Bus.Bottom.Color = "255, 89, 89"
 	game.Workspace.Battle_Bus.Base.TextureID = "rbxassetid://5914197871"
-	game.Workspace.Battle_Bus.TextureID = "rbxassetid://5914205610"
+	game.Workspace.Battle_Bus.Baloon.TextureID = "rbxassetid://5914205610"
 end);
 
 Load:Label("Gamepasses")
@@ -535,4 +533,4 @@ for _, Child in pairs(game.CoreGui.ScreenGui.main.border:GetChildren()) do
 	end
 
 
-end 
+end
