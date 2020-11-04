@@ -1,4 +1,4 @@
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/nonfunctable/Public-IRF/main/Lib"))();
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/nonfunctable/Public-IRF/main/Lib"))()
 
 local Skins = library:CreateSection("Skins");
 Skins:Label("Skins")
