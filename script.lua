@@ -502,21 +502,21 @@ Load:Button("Deh's Head", function()
 	game.ReplicatedStorage.Character_Clothing.Hat["Fire Head"].Hat.Hat.SpecialMesh.MeshId = "rbxassetid://5231633837" 
 	game.ReplicatedStorage.Character_Clothing.Hat["Fire Head"].Hat.Hat.SpecialMesh.TextureId = "rbxassetid://5231633857" 
 	game.ReplicatedStorage.Character_Clothing.Hat["Fire Head"].Name = "Deh's Head" 
-	game.ReplicatedStorage.Character_Clothing.Hat["Deh's Head"].Image.Value = 5912500167
+	game.ReplicatedStorage.Character_Clothing.Hat["Deh's Head"].Image.Value = 5912500175
 end);
 
 Load:Button("Deh's Crown", function()
 	game.ReplicatedStorage.Character_Clothing.Hat["Fallen Iced Halo"].Hat.Hat.SpecialMesh.MeshId = "rbxassetid://5231556574" 
 	game.ReplicatedStorage.Character_Clothing.Hat["Fallen Iced Halo"].Hat.Hat.SpecialMesh.TextureId = "rbxassetid://5231585676" 
 	game.ReplicatedStorage.Character_Clothing.Hat["Fallen Iced Halo"].Name = "Deh's Crown" 
-	game.ReplicatedStorage.Character_Clothing.Hat["Deh's Crown"].Image.Value = 5912500637
+	game.ReplicatedStorage.Character_Clothing.Hat["Deh's Crown"].Image.Value = 5912500647
 end);
 
 Load:Button("Deh's Antlers", function()
 	game.ReplicatedStorage.Character_Clothing.Hat["Golden Antlers"].Hat.Hat.Mesh.MeshId = "rbxassetid://5197531506" 
 	game.ReplicatedStorage.Character_Clothing.Hat["Golden Antlers"].Hat.Hat.Mesh.TextureId = "rbxassetid://5197533801" 
 	game.ReplicatedStorage.Character_Clothing.Hat["Golden Antlers"].Name = "Deh's Antlers" 
-	game.ReplicatedStorage.Character_Clothing.Hat["Deh's Antlers"].Image.Value = 5912522729
+	game.ReplicatedStorage.Character_Clothing.Hat["Deh's Antlers"].Image.Value = 5912522737
 end);
 
 library:Ready();
