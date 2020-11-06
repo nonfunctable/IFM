@@ -40,6 +40,10 @@ end);
 
 Skins:Label("Custom Skins")
 
+Skins:Button("Deh's Skin", function()
+	game.ReplicatedStorage.Player_Data[game.Players.LocalPlayer.Name].Clothing.Value = "Deh's Skin"	
+end);
+
 Skins:Button("Halloween Shitty", function()
 	game.ReplicatedStorage.Player_Data[game.Players.LocalPlayer.Name].Clothing.Value = "Halloween Shitty"	
 end);
@@ -468,6 +472,16 @@ Load:Button("Cat Skin", function()
 	itemst2.Top.Value = "http://www.roblox.com/asset/?id=5328598139"
 	itemst2.Bottom.Value = "http://www.roblox.com/asset/?id=2357146090"
 	game.ReplicatedStorage.Character_Clothing.Clothing["Cat Skin"].Image.Value = 5907675638
+end);
+
+Load:Button("Deh's Skin", function()
+	local item = game.ReplicatedStorage.Character_Clothing.Clothing["Spizzik Skin"]
+	local item = game.ReplicatedStorage.Character_Clothing.Clothing["Spizzik Skin"]:Clone()
+	item.Name = "Deh's Skin"
+	local itemst2 = game.ReplicatedStorage.Character_Clothing.Clothing["Deh's Skin"]
+	itemst2.Top.Value = "rbxassetid://5572548196"
+	itemst2.Bottom.Value = "rbxassetid://5315397139"
+	game.ReplicatedStorage.Character_Clothing.Clothing["Deh's Skin"].Image.Value = 5912360041
 end);
 
 Load:Label("Hats")
