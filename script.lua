@@ -477,7 +477,7 @@ end);
 Load:Button("Deh's Skin", function()
 	local item = game.ReplicatedStorage.Character_Clothing.Clothing["Spizzik Skin"]
 	local item = game.ReplicatedStorage.Character_Clothing.Clothing["Spizzik Skin"]:Clone()
-	local item = game.ReplicatedStorage.Character_Clothing.Clothing["Spizzik Skin"].Name = "Deh's Skin"
+    game.ReplicatedStorage.Character_Clothing.Clothing["Spizzik Skin"].Name = "Deh's Skin"
 	local itemst2 = game.ReplicatedStorage.Character_Clothing.Clothing["Deh's Skin"]
 	itemst2.Top.Value = "rbxassetid://5572548196"
 	itemst2.Bottom.Value = "rbxassetid://5315397139"
