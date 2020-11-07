@@ -1,0 +1,2 @@
+game:GetService("Players")[game.Players.LocalPlayer.name].Backpack.Pickaxe.Handle.MeshId = "rbxassetid://28140935"
+game:GetService("Players")[game.Players.LocalPlayer.name].Backpack.Pickaxe.Handle.TextureID = "rbxassetid://27739981"
