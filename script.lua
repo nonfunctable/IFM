@@ -385,6 +385,82 @@ Hats1:Button("Deh's Antlers (Custom)", function()
 	game.ReplicatedStorage.Player_Data[game.Players.LocalPlayer.Name].Hat4.Value = "Deh's Antlers"
 end);
 
+
+local Visuals = library:CreateSection("Visuals")
+Visuals:Button ("ESP", function()
+	local OwlESP = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/SiLeNSwOrD/OwlHub/master/scripts/OwlESP.lua"))();
+
+
+
+local players = game:GetService("Players");
+local runService = game:GetService("RunService");
+local localPlayer = players.LocalPlayer;
+local tracking = {};
+
+local remove = table.remove;
+local fromRGB = Color3.fromRGB;
+
+local espColor = fromRGB(255, 255, 255);
+local teamCheck = false;
+
+local function characterRemoving(char)
+    for i, v in next, tracking do
+        if v.char == char then
+            v:remove();
+            remove(tracking, i);
+        end;
+    end;
+end;
+
+local function characterAdded(plr)
+    local char = plr.Character;
+    char:WaitForChild("HumanoidRootPart"); char:WaitForChild("Head");
+    tracking[#tracking + 1] = OwlESP.new({
+        plr = plr,
+        espBoxVisible = true,
+        tracerVisible = true,
+        text = plr.Name,
+        teamCheck = teamCheck,
+        espColor = espColor
+    });
+end;
+
+for i, v in next, players:GetPlayers() do
+    if v ~= localPlayer then
+        local char = v.Character;
+        if char and char:FindFirstChild("HumanoidRootPart") and char:FindFirstChild("Head") then
+            tracking[#tracking + 1] = OwlESP.new({
+                plr = v,
+                espBoxVisible = true,
+                tracerVisible = true,
+                text = v.Name,
+                teamCheck = teamCheck,
+                espColor = espColor
+            });
+        end;
+        v.CharacterAdded:Connect(function()
+            characterAdded(v);
+        end);
+        v.CharacterRemoving:Connect(characterRemoving);
+    end;
+end;
+
+local function playerAdded(plr)
+    plr.CharacterAdded:Connect(function()
+        characterAdded(plr);
+    end);
+    plr.CharacterRemoving:Connect(characterRemoving);
+end;
+
+players.PlayerAdded:Connect(playerAdded);
+
+runService.RenderStepped:Connect(function()
+    for i, v in next, tracking do
+        v:update();
+    end;
+end);
+end);
+
 local Load = library:CreateSection("Misc");
 
 Load:Button("Red Battle Bus", function()
