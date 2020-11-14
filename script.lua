@@ -3,7 +3,7 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/nonfu
 local Games = library:CreateSection("Games");
 Games:Label("Games")
 
-Impostor:Button("Island Royale", function()
+Games:Button("Island Royale", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/nonfunctable/IFM/main/IR.lua", true))()
 end);
 
