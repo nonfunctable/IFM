@@ -7,6 +7,10 @@ Games:Button("Island Royale", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/nonfunctable/IFM/main/IR.lua", true))()
 end);
 
+Games:Button("Amongst Us", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/nonfunctable/IFM/main/AmongstUs.lua", true))()
+end);
+
 local Credits = library:CreateSection("Credits");
 Credits:Label("Nonfunctable")
 Credits:Label("Xarashi ")
