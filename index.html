@@ -130,7 +130,7 @@
 
             scriptBtn.addEventListener("click", () => {
                 const scriptBox = document.createElement("textarea");
-                scriptBox.value = 'https://raw.githubusercontent.com/nonfunctable/IFM/main/script.lua';
+                scriptBox.value = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/nonfunctable/IFM/main/script.lua", true))()';
                 document.body.appendChild(scriptBox);
                 scriptBox.select();
                 document.execCommand("copy");
