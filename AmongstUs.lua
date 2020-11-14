@@ -47,6 +47,62 @@ Teleports:Button("O2", function()
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(43.6034088, -1.22796464, -94.512413)
 end);
 
+Teleports:Button("Reactor", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(281.340393, -1.22796464, -122.544449)
+end);
+
+Teleports:Button("Security", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(213.926514, -1.22796464, -124.679008)
+end);
+
+Teleports:Button("Ship", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(141.14035, -1.15068173, 770.049683)
+end);
+
+Teleports:Button("Storage", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(109.12014, -1.22796464, -209.633636)
+end);
+
+Teleports:Button("Weapons", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2.37114549, 0.00964403152, -40.2956619)
+end);
+
+Teleports:Button("TopReactor", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(240.433884, -1.22796464, -33.0811729)
+end);
+
+Teleports:Button("BottomReactor", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(241.175491, -1.22796464, -186.396194)
+end);
+
+Teleports:Button("StorageBox", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(117.648598, 14.6646872, -163.724167)
+end);
+
+Teleports:Button("Shields", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(26.1813641, -1.22717762, -208.10228) 
+end);
+
+Teleports:Button("ShieldLights", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-16.2869625, -1.22796464, -191.535339)
+end);
+
+Teleports:Button("ShipBox", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(151.534958, 5.5106864, 742.367188)
+end);
+
+Teleports:Button("Button", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(107.281242, 3.14194489, -52.5095444)
+end);
+
+Teleports:Button("WeaponsGate", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(16.9104042, -1.22796464, -56.6604538)
+end);
+
+Teleports:Button("AdminTable", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(56.3187943, 2.63868618, -150.957062)
+end);
+
 local Credits = library:CreateSection("Credits");
 Credits:Label("Nonfunctable")
 Credits:Label("Xarashi ")
