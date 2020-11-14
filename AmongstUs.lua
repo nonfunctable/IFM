@@ -3,16 +3,16 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/nonfu
 local Impostor = library:CreateSection("Impostor");
 
 Impostor:Button("Infinite Kill Range", function()
-local mt = getrawmetatable(game)
-local old = mt.__index 
-setreadonly(mt, false)
-mt.__index = newcclosure(function(self, key)
-    if tostring(self) == 'killDistance' and key=='Value' then
-        return math.huge
-    end
-    return old(self, key)
-end)
-setreadonly(mt, true)
+	local mt = getrawmetatable(game)
+	local old = mt.__index 
+	setreadonly(mt, false)
+	mt.__index = newcclosure(function(self, key)
+		if tostring(self) == 'killDistance' and key=='Value' then
+			return math.huge
+		end
+		return old(self, key)
+	end)
+	setreadonly(mt, true)
 end);
 
 local Crewmate = library:CreateSection("Crewmate");
@@ -20,15 +20,31 @@ local Crewmate = library:CreateSection("Crewmate");
 local Teleports = library:CreateSection("Teleports");
 
 Teleports:Button("Admin", function()
-    	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(78.7842026, -1.22796464, -157.911301)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(78.7842026, -1.22796464, -157.911301)
 end);
 
 Teleports:Button("Cafe", function()
- 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(93.3796005, -1.22796464, -53.7551956)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(93.3796005, -1.22796464, -53.7551956)
 end);
 
 Teleports:Button("Comms", function()
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(64.2091217, -1.22796464, -228.140656)
+end);
+
+Teleports:Button("Electrical", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(188.721939, -1.22796464, -136.435516) 
+end);
+
+Teleports:Button("Medbay", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(171.40184, -1.22796464, -104.473267)
+end);
+
+Teleports:Button("Nav", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-76.3353195, -1.22796464, -104.646179)
+end);
+
+Teleports:Button("O2", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(43.6034088, -1.22796464, -94.512413)
 end);
 
 local Credits = library:CreateSection("Credits");
