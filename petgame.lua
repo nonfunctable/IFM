@@ -1,8 +1,7 @@
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/nonfunctable/IFM/main/Lib.lua"))();
 
-local Hacks = library:CreateSection("shit")
+local Hacks = library:CreateSection("Pet Spawning")
 
-if game.PlaceId == "5414779423" then
 local Pets = game:GetService("ReplicatedStorage").GameClient.Assets.PetModels
 for i, v in pairs(Pets:GetChildren()) do
 Hacks:Button(v.Name, function()
@@ -68,7 +67,6 @@ local args = {
 
 game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.HandlePet:InvokeServer(unpack(args))
 end);
-end
 end
 
 local Credits = library:CreateSection("Credits");
