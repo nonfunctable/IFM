@@ -50,12 +50,19 @@ end
 for i=1, _G.number_of_rebirth do wait(0.5)
     local player = game.Players.LocalPlayer
     local rebirths = player.leaderstats.Rebirths.Value
-    
+    wait(.7)
     equipTrail() equipShoes() equipLaces()
+    wait(.7)
     collect() sellTp()
+    wait(.7)
     sellClick()
+    wait(.7)
     if rebirths < 8 then buyMax(1e6) collect() sellClick() end
+    wait(.7)
     buyMax() collect() sellClick()
+    wait(.7)
     buyMax(1e13) collect(rebirths*(rebirths/8-rebirths/8%1)+1)
+    wait(.7)
     sellClick() rebirth()
+    wait(.7)
 end
