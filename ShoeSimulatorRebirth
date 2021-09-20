@@ -64,5 +64,5 @@ for i=1, _G.number_of_rebirth do wait(0.5)
     buyMax(1e13) collect(rebirths*(rebirths/8-rebirths/8%1)+1)
     wait(.7)
     sellClick() rebirth()
-    wait(.7)
+    wait(5)
 end
