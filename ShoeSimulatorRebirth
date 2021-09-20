@@ -47,22 +47,21 @@ local rebirth = function()
     game:GetService("ReplicatedStorage").Events.Buy:FireServer({"Rebirth"}) wait(1)
 end
 
-for i=1, _G.number_of_rebirth do wait(0.5)
+for i=1, _G.number_of_rebirth do wait(5)
     local player = game.Players.LocalPlayer
     local rebirths = player.leaderstats.Rebirths.Value
-    wait(2)
     equipTrail() equipShoes() equipLaces()
-    wait(2)
+    wait(3)
     collect() sellTp()
-    wait(2)
+    wait(3)
     sellClick()
-    wait(2)
+    wait(3)
     if rebirths < 8 then buyMax(1e6) collect() sellClick() end
     wait(2)
     buyMax() collect() sellClick()
-    wait(2)
+    wait(3)
     buyMax(1e13) collect(rebirths*(rebirths/8-rebirths/8%1)+1)
-    wait(2)
+    wait(3)
     sellClick() rebirth()
     wait(8.5)
 end
