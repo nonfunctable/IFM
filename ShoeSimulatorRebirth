@@ -29,7 +29,7 @@ local equipTrail = function(a) game:GetService("ReplicatedStorage").Events.Buy:F
 local equipLaces = function(a) game:GetService("ReplicatedStorage").Events.Buy:FireServer({
        [1] = "Equip",
        [2] = "Laces",
-       [3] = a or "Glass", -- Best Laces
+       [3] = a or "Black Glass", -- Best Laces
        [4] = true
 }) end
 
@@ -64,5 +64,5 @@ for i=1, _G.number_of_rebirth do wait(0.5)
     buyMax(1e13) collect(rebirths*(rebirths/8-rebirths/8%1)+1)
     wait(.7)
     sellClick() rebirth()
-    wait(5)
+    wait(6.5)
 end
