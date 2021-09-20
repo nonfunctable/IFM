@@ -1,0 +1,61 @@
+_G.number_of_rebirth = _G.number_of_rebirth or 1000 -- The number of rebirth you want make must be greater than 0
+
+local collect = function(a) for i=1, a or 1 do game:GetService("ReplicatedStorage").Events.Collect:FireServer({
+        [1] = "PickupShoe",
+        [2] = "Starter",
+        [3] = Vector3.new(0, 0, 0),
+        [4] = "Cowboy Boots3"
+}) end end
+
+local equipShoes = function(a) game:GetService("ReplicatedStorage").Events.Buy:FireServer({
+       [1] = "Equip",
+       [2] = "Shoes",
+       [3] = a or "Cowboy Boots3", -- Best Shoes
+       [4] = true
+}) end
+
+local equipTrail = function(a) game:GetService("ReplicatedStorage").Events.Buy:FireServer({
+       [1] = "Equip",
+       [2] = "Trails",
+       [3] = "Pizza Trail",
+       [4] = true
+}) game:GetService("ReplicatedStorage").Events.Buy:FireServer({
+       [1] = "Equip",
+       [2] = "Trails",
+       [3] = a or "Money Trail", -- Best trail
+       [4] = true
+}) end
+
+local equipLaces = function(a) game:GetService("ReplicatedStorage").Events.Buy:FireServer({
+       [1] = "Equip",
+       [2] = "Laces",
+       [3] = a or "Glass", -- Best Laces
+       [4] = true
+}) end
+
+local sellTp = function() game:GetService("ReplicatedStorage").Events.Teleport:FireServer({"Sell"}) end
+
+local sellClick = function(a) for i=1, a or 1 do
+    game:GetService("ReplicatedStorage").Events.Click:FireServer({"Screen", workspace.SellPlaces.Starter})
+end wait(.7) end
+
+local buyMax = function(a)
+    game:GetService("ReplicatedStorage").Events.Buy:FireServer({"BuyMaxLaces", a or "300000000"}) wait(.7)
+end
+
+local rebirth = function()
+    game:GetService("ReplicatedStorage").Events.Buy:FireServer({"Rebirth"}) wait(1)
+end
+
+for i=1, _G.number_of_rebirth do wait()
+    local player = game.Players.LocalPlayer
+    local rebirths = player.leaderstats.Rebirths.Value
+    
+    equipTrail() equipShoes() equipLaces()
+    collect() sellTp()
+    sellClick()
+    if rebirths < 8 then buyMax(1e6) collect() sellClick() end
+    buyMax() collect() sellClick()
+    buyMax(1e13) collect(rebirths*(rebirths/8-rebirths/8%1)+1)
+    sellClick() rebirth()
+end
