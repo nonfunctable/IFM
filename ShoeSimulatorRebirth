@@ -47,7 +47,7 @@ local rebirth = function()
     game:GetService("ReplicatedStorage").Events.Buy:FireServer({"Rebirth"}) wait(1)
 end
 
-for i=1, _G.number_of_rebirth do wait()
+for i=1, _G.number_of_rebirth do wait(0.5)
     local player = game.Players.LocalPlayer
     local rebirths = player.leaderstats.Rebirths.Value
     
