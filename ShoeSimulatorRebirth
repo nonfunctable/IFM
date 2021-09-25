@@ -4,13 +4,13 @@ local collect = function(a) for i=1, a or 1 do game:GetService("ReplicatedStorag
         [1] = "PickupShoe",
         [2] = "Starter",
         [3] = Vector3.new(0, 0, 0),
-        [4] = "Cowboy Boots3"
+        [4] = "Air Blue3"
 }) end end
 
 local equipShoes = function(a) game:GetService("ReplicatedStorage").Events.Buy:FireServer({
        [1] = "Equip",
        [2] = "Shoes",
-       [3] = a or "Cowboy Boots3", -- Best Shoes
+       [3] = a or "Air Blue3", -- Best Shoes
        [4] = true
 }) end
 
@@ -29,7 +29,7 @@ local equipTrail = function(a) game:GetService("ReplicatedStorage").Events.Buy:F
 local equipLaces = function(a) game:GetService("ReplicatedStorage").Events.Buy:FireServer({
        [1] = "Equip",
        [2] = "Laces",
-       [3] = a or "Black Glass", -- Best Laces
+       [3] = a or "Blue Slime", -- Best Laces
        [4] = true
 }) end
 
