@@ -10,7 +10,7 @@ GlobalActivation:NewButton("Backroom Code", "ButtonInfo", function()
 	l__LocalPlayer__5.Character.PrimaryPart:PivotTo(CFrame.new(Vector3.new(-39.3, -88.362, -1.075)));
 	require(game.ReplicatedStorage.Controllers.BitQuest):SetKeypadInput(("28202955311922222657224623142401"));
 end)
-GlobalActivation:NewButton("Twitter Code", "ButtonInfo", function()
+GlobalActivation:NewButton("Input Twitter Code (Button Doesn't work)", "ButtonInfo", function()
 	game:GetService("ReplicatedStorage").DragonEngine.Network.Service_Endpoints.MarketService.RedeemTwitterCode:InvokeServer("inthehoodilie")
 end)
 GlobalActivation:NewButton("Teleport Backroom", "Teleports to Backroom", function()
@@ -84,7 +84,7 @@ DrumsActivations:NewButton("Tele DrumL Room", "???", function()
 	local l__LocalPlayer__5 = game:GetService("Players").LocalPlayer;
 	l__LocalPlayer__5.Character.PrimaryPart:PivotTo(CFrame.new(Vector3.new(-6.848518371582031, 22.501150131225586, 251.9237518310547)));
 end)
-DrumsActivations:NewButton("Tele DrumL Room", "???", function()
+DrumsActivations:NewButton("Tele DrumR Room", "???", function()
 	local l__LocalPlayer__5 = game:GetService("Players").LocalPlayer;
 	l__LocalPlayer__5.Character.PrimaryPart:PivotTo(CFrame.new(Vector3.new(3.7955751419067383, 21.800743103027344, 340.8682556152344)));
 end)
@@ -92,7 +92,7 @@ DrumsActivations:NewButton("Tele PowerRoom", "???", function()
 	local l__LocalPlayer__5 = game:GetService("Players").LocalPlayer;
 	l__LocalPlayer__5.Character.PrimaryPart:PivotTo(CFrame.new(Vector3.new(-1.3536244630813599, 50.09547424316406, 338.9856872558594)));
 end)
-SubrinaActivation:NewButton("Place Drums", "Put in Stuff Manually", function()
+DrumsActivations:NewButton("Place Drums", "Put in Stuff Manually", function()
 	game:GetService("ReplicatedStorage").DragonEngine.Network.Service_Endpoints.DrumPuzzleService.ToggleStand:InvokeServer()
 end)
 DrumsActivations:NewButton("Hit Correct Sequence", "???", function()
@@ -132,11 +132,6 @@ SkinsEquips:NewButton("Equp DJ", "Put in Stuff Manually", function()
 	if v50 then
 		require(game.ReplicatedStorage.Controllers.MarketController):EquipItem(v50);
 	end;
-end)
-local SecretButton = SecretPowerPack:NewSection("Secret Button")
-SecretButton:NewButton("Tele Secret Button", "Put in Stuff Manually", function()
-	local l__LocalPlayer__5 = game:GetService("Players").LocalPlayer;
-	l__LocalPlayer__5.Character.PrimaryPart:PivotTo(CFrame.new(Vector3.new(442.841, -14.947, -241.02)));
 end)
 local SecretButton = SecretPowerPack:NewSection("Secret Button")
 SecretButton:NewButton("Tele Secret Button", "Put in Stuff Manually", function()
